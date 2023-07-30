@@ -130,7 +130,12 @@ export default {
   computed: {
     ...mapGetters(["listaSinDespliegue", "listaConDespliegue"]),
   },
-  
+  mounted(){
+    const nav = document.querySelector('.barra1')
+    window.addEventListener('scroll', function(){
+      nav.classList.toggle('active', window.scrollY > 0)
+    })
+  },
   methods: {
     cerrar() {
       this.drawer = false;
