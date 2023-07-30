@@ -1,11 +1,8 @@
 <template>
   <v-app>
-    <v-card>
-      <Barra/>
-      <router-view />
-    </v-card>
+    <Barra />
+    <router-view />
   </v-app>
-
 </template>
 
 <script>

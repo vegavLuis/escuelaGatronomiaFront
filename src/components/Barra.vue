@@ -39,14 +39,14 @@
               class="hidden-sm-and-down"
               text
             >
-              <span class="titulos"
-                >{{ item.title }}<v-icon>mdi-chevron-down</v-icon></span
+              <span class="titulos">
+                {{ item.title }}<v-icon>mdi-chevron-down</v-icon></span
               >
             </v-btn>
           </template>
           <v-list>
             <v-list-item link v-for="sub in item.prueba" :key="sub.index">
-              <v-list-item-title>{{ sub }}</v-list-item-title>
+              <v-list-item-title @click="scrollInto(sub.element)">{{ sub.sub }}</v-list-item-title>
             </v-list-item>
           </v-list>
         </v-menu>
@@ -58,6 +58,8 @@
           :color="item.color"
           :elevation="item.elevation"
           class="hidden-sm-and-down"
+          @click="scrollInto(sub.element)"
+
         >
           <span class="blue--whithe titulos">{{ item.titulo }}</span>
         </v-btn>
@@ -130,13 +132,21 @@ export default {
   computed: {
     ...mapGetters(["listaSinDespliegue", "listaConDespliegue"]),
   },
-  mounted(){
-    const nav = document.querySelector('.barra1')
-    window.addEventListener('scroll', function(){
-      nav.classList.toggle('active', window.scrollY > 0)
-    })
+  mounted() {
+    const nav = document.querySelector(".barra1");
+    window.addEventListener("scroll", function () {
+      nav.classList.toggle("active", window.scrollY > 0);
+    });
   },
   methods: {
+    scrollInto(sub) {
+      // console.log(sub)
+      const section = document.querySelector(`#${sub}`);
+      section.scrollIntoView({
+        behavior: "smooth",
+      });
+    },
+    
     cerrar() {
       this.drawer = false;
     },
@@ -151,4 +161,3 @@ export default {
   },
 };
 </script>
-                                                                  

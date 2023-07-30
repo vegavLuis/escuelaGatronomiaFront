@@ -1,15 +1,19 @@
 <template>
-  <Carousel />
+  <div>
+    <Carousel/>
+    <Licenciatura/>
+  </div>
 </template>
 
 <script>
-  import Carousel from '../components/Carousel.vue'
+import Carousel from "../components/Carousel.vue";
+import Licenciatura from '@/components/Licenciatura.vue';
+export default {
+  name: "Home",
 
-  export default {
-    name: 'Home',
-
-    components: {
-      Carousel,
-    },
-  }
+  components: {
+    Carousel,
+    Licenciatura,
+  },
+};
 </script>

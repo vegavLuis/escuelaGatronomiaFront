@@ -19,12 +19,6 @@
       </v-card>
     </v-carousel-item>
     </v-carousel>
-    <v-card height="1000px">
-      zxczx
-    </v-card>
-
-
-
   </div>
 </template>
 
