@@ -14,10 +14,17 @@
         transition="fade-transition"
         class="imagenes"
       >
-      <v-card color="rgba(0,0,0,.3)" width="100%" height="100%" class="d-flex justify-center align-center">
-        <h1 class="titulo">Escuela de alta cocina y gastromonia</h1>
-      </v-card>
-    </v-carousel-item>
+        <v-card
+          color="rgba(0,0,0,.3)"
+          width="100%"
+          height="100%"
+          class="d-flex justify-center align-center"
+        >
+          <v-card color="rgba(167, 16, 23, 0.85)" elevation="0" class="mx-4 pa-2 text-center card-titulo">
+            <h1 class="titulo white--text">Escuela de Alta Cocina y Gastromonía</h1>
+          </v-card>
+        </v-card>
+      </v-carousel-item>
     </v-carousel>
   </div>
 </template>
@@ -25,8 +32,7 @@
 <script>
 export default {
   name: "EscuelaCarousel",
-  components:{
-  },
+  components: {},
   data() {
     return {
       items: [
@@ -52,7 +58,13 @@ export default {
 };
 </script>
 <style scoped>
-.titulo{
+.card-titulo{
+  margin-top: 230px;
+}
+.titulo {
   justify-content: center;
+  font-family: 'Tiro Devanagari Hindi';
+  font-style: italic;
+  font-weight: normal;
 }
 </style>
