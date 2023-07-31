@@ -46,7 +46,9 @@
           </template>
           <v-list>
             <v-list-item link v-for="sub in item.prueba" :key="sub.index">
-              <v-list-item-title @click="scrollInto(sub.element)">{{ sub.sub }}</v-list-item-title>
+              <v-list-item-title @click="scrollInto(sub.element)">{{
+                sub.sub
+              }}</v-list-item-title>
             </v-list-item>
           </v-list>
         </v-menu>
@@ -59,7 +61,6 @@
           :elevation="item.elevation"
           class="hidden-sm-and-down"
           @click="scrollInto(sub.element)"
-
         >
           <span class="blue--whithe titulos">{{ item.titulo }}</span>
         </v-btn>
@@ -72,6 +73,29 @@
     <!-- NAVIGATION DRAGER -->
     <v-navigation-drawer v-model="drawer" fixed temporary>
       <v-list>
+        <!-- LISTA CON DESPLIEGUE -->
+        <v-list-group
+          v-for="item in listaConDespliegue"
+          :key="item.title"
+          v-model="item.active"
+        >
+          <!-- :prepend-icon="item.action"
+        no-action -->
+          <template v-slot:activator>
+            <v-list-item-content>
+              <span class="titulos">{{ item.title }}</span>
+            </v-list-item-content>
+          </template>
+
+          <v-list-item v-for="child in item.prueba" :key="child.title">
+            <v-list-item-content>
+              <v-list-item-title @click="cerrar">
+                <span class="titulo">{{ child.sub }}</span>
+                <a href="https://google.com"> </a>
+              </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list-group>
         <!-- LISTA SIN DESPLIEGUE -->
         <v-btn
           color="transparent"
@@ -92,29 +116,6 @@
             </span>
           </v-list-item>
         </v-btn>
-        <!-- LISTA CON DESPLIEGUE -->
-        <v-list-group
-          v-for="item in listaConDespliegue"
-          :key="item.title"
-          v-model="item.active"
-        >
-          <!-- :prepend-icon="item.action"
-        no-action -->
-          <template v-slot:activator>
-            <v-list-item-content>
-              <span class="titulos">{{ item.title }}</span>
-            </v-list-item-content>
-          </template>
-
-          <v-list-item v-for="child in item.prueba" :key="child.title">
-            <v-list-item-content>
-              <v-list-item-title @click="cerrar">
-                <span class="titulo">{{ child }}</span>
-                <a href="https://google.com"> </a>
-              </v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-        </v-list-group>
       </v-list>
     </v-navigation-drawer>
   </div>
@@ -146,7 +147,7 @@ export default {
         behavior: "smooth",
       });
     },
-    
+
     cerrar() {
       this.drawer = false;
     },
