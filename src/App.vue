@@ -30,6 +30,15 @@ export default {
 .barra1.active {
   background-color: rgba(0, 0, 0, 0.95) !important;
 }
+.semiBold {
+  font-weight: 600;
+}
+.extraBold {
+  font-weight: 800;
+}
+.medium {
+  font-weight: 500;
+}
 .titulos {
   font-size: 16px;
   font-weight: 500;
