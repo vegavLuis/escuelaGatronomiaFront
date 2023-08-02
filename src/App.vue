@@ -27,6 +27,10 @@ export default {
 * {
   font-family: "Manrope";
 }
+.tiro-devnagari{
+  font-family: 'Trio Devanagari Hindi';
+  font-style: italic;
+}
 .barra1.active {
   background-color: rgba(0, 0, 0, 0.95) !important;
 }

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 class="text-center pt-12 pb-6">Licenciatura</h2>
+    <h2 class="text-center pt-12 pb-6 tiro-devnagari">Licenciatura</h2>
       <LicEnGastronomiaVue />
       <LicEnAdmin/>
   </div>
