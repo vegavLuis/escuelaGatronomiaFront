@@ -2,8 +2,12 @@
   <div>
     <v-app-bar
       dark
+      color="transparent"
       elevation="0"
       height="150px"
+      hide-on-scroll
+      class="barra1"
+      app
     >
       <!-- IMAGES -->
       <div class="">
@@ -131,10 +135,10 @@ export default {
     ...mapGetters(["listaSinDespliegue", "listaConDespliegue"]),
   },
   mounted() {
-    // const nav = document.querySelector(".barra1");
-    // window.addEventListener("scroll", function () {
-    //   nav.classList.toggle("active", window.scrollY > 0);
-    // });
+    const nav = document.querySelector(".barra1");
+    window.addEventListener("scroll", function () {
+      nav.classList.toggle("active", window.scrollY > 0);
+    });
   },
   methods: {
     scrollInto(sub) {
