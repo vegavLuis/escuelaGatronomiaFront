@@ -1,56 +1,47 @@
 <template>
-  <div>
-    <v-card
-      v-for="item in data"
-      :key="item.encabezado"
-      elevation="0"
-    >
-      <v-row class="ma-4">
-        <v-col cols="12" md="6">
-          <v-card color="green" elevation="0" height="600px">
-            <img :src="item.src" class="imagen">
-          </v-card>
-        </v-col>
-        <v-col cols="12" md="6">
-          <v-card elevation="0">
-            <h3 class="primary--text extraBold">
-              {{ item.encabezado }}
-            </h3>
-            <p class="success--text semiBold">RVOE: {{ item.rvoe }}</p>
-            <p class="extraBold info--text">{{ item.duracion }}</p>
-            <p class="medium mb-0">
-              Incluye: <span class="extraBold">{{ item.inclye }}</span>
+  <div class="ma-10">
+    <v-row v-for="item in data" :key="item.encabezado">
+      <v-col cols="12" md="6">
+          <img :src="item.src" class="imagen" />
+      </v-col>
+      <v-col cols="12" md="6">
+        <v-card elevation="0">
+          <h3 class="primary--text extraBold">
+            {{ item.encabezado }}
+          </h3>
+          <p class="success--text semiBold">RVOE: {{ item.rvoe }}</p>
+          <p class="extraBold info--text">{{ item.duracion }}</p>
+          <p class="medium mb-0">
+            Incluye: <span class="extraBold">{{ item.inclye }}</span>
+          </p>
+          <p class="medium mb-0">
+            Aprendizaje:
+            <span class="extraBold">{{ item.aprendizaje }}</span>
+          </p>
+          <p class="medium">
+            Modalidades:
+            <span class="extraBold">{{ item.modalidades }}</span>
+          </p>
+          <p class="semiBold primary--text">{{ item.insumos }}</p>
+          <v-btn class="my-4 pa-5 extraBold" color="info">
+            <span class="boton">INFORMES</span>
+          </v-btn>
+          <div class="carta pa-8">
+            <h5 class="primary--text">{{ item.perfil }}</h5>
+            <p class="medium success--text mt-2">
+              Al egresar de la
+              <span class="primary--text extraBold"
+                >Licenciatura en Gastronomía</span
+              >
+              serás capaz de difundir y transmitir la cultura gastronómica en
+              todos sus enfoques tanto teóricos como prácticos en el proceso de
+              alimentos y bebidas. Tendrás conocimientos y herramientas para
+              emprender y gestionar negocios en la industria gastronómica.
             </p>
-            <p class="medium mb-0">
-              Aprendizaje:
-              <span class="extraBold">{{ item.aprendizaje }}</span>
-            </p>
-            <p class="medium">
-              Modalidades:
-              <span class="extraBold">{{ item.modalidades }}</span>
-            </p>
-            <p class="semiBold primary--text">{{ item.insumos }}</p>
-            <v-btn class="my-4 pa-5 extraBold" color="info">
-              <span class="boton">INFORMES</span>
-            </v-btn>
-            <div class="carta pa-8">
-              <h5 class="primary--text">{{ item.perfil }}</h5>
-              <p class="medium success--text mt-2">
-                Al egresar de la
-                <span class="primary--text extraBold"
-                  >Licenciatura en Gastronomía</span
-                >
-                serás capaz de difundir y transmitir la cultura gastronómica en
-                todos sus enfoques tanto teóricos como prácticos en el proceso
-                de alimentos y bebidas. Tendrás conocimientos y herramientas
-                para emprender y gestionar negocios en la industria
-                gastronómica.
-              </p>
-            </div>
-          </v-card>
-        </v-col>
-      </v-row>
-    </v-card>
+          </div>
+        </v-card>
+      </v-col>
+    </v-row>
   </div>
 </template>
 

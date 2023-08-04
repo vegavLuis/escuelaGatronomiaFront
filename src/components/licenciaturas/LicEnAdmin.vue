@@ -1,47 +1,43 @@
 <template>
-  <div>
-    <v-card v-for="item in data" :key="item.encabezado" elevation="0">
-      <v-row class="ma-4">
-        <v-col cols="12" md="6">
-          <v-card color="green" elevation="0" height="600px">
-            <img :src="item.src" class="imagen" />
-          </v-card>
-        </v-col>
-        <v-col cols="12" md="6">
-          <v-card elevation="0">
-            <h3 class="primary--text extraBold">
-              {{ item.encabezado }}
-            </h3>
-            <!-- <p class="success--text semiBold">RVOE: {{ item.rvoe }}</p> -->
-            <p class="extraBold info--text">{{ item.duracion }}</p>
-            <p class="medium mb-0">
-              Incluye: <span class="extraBold">{{ item.inclye }}</span>
+  <div class="ma-10">
+    <v-row v-for="item in data" :key="item.encabezado">
+      <v-col cols="12" md="6">
+        <img :src="item.src" class="imagen" />
+      </v-col>
+      <v-col cols="12" md="6">
+        <v-card elevation="0">
+          <h3 class="primary--text extraBold">
+            {{ item.encabezado }}
+          </h3>
+          <!-- <p class="success--text semiBold">RVOE: {{ item.rvoe }}</p> -->
+          <p class="extraBold info--text">{{ item.duracion }}</p>
+          <p class="medium mb-0">
+            Incluye: <span class="extraBold">{{ item.inclye }}</span>
+          </p>
+          <p class="medium mb-0">
+            Aprendizaje:
+            <span class="extraBold">{{ item.aprendizaje }}</span>
+          </p>
+          <p class="medium">
+            Modalidades:
+            <span class="extraBold">{{ item.modalidades }}</span>
+          </p>
+          <!-- <p class="semiBold primary--text">{{ item.insumos }}</p> -->
+          <v-btn class="my-4 pa-5 extraBold" color="info">
+            <span class="boton">INFORMES</span>
+          </v-btn>
+          <div class="carta pa-8">
+            <h5 class="primary--text">{{ item.perfil }}</h5>
+            <p class="medium success--text mt-2">
+              El licenciado en gastronomía será capaz de preservar, difundir y
+              transmitir la cultura gastronómica en todos sus enfoques con sus
+              conocimientos e información integral obtenida tanto teóricas como
+              practicas en el procesamiento de alimentos y bebidas
             </p>
-            <p class="medium mb-0">
-              Aprendizaje:
-              <span class="extraBold">{{ item.aprendizaje }}</span>
-            </p>
-            <p class="medium">
-              Modalidades:
-              <span class="extraBold">{{ item.modalidades }}</span>
-            </p>
-            <!-- <p class="semiBold primary--text">{{ item.insumos }}</p> -->
-            <v-btn class="my-4 pa-5 extraBold" color="info">
-              <span class="boton">INFORMES</span>
-            </v-btn>
-            <div class="carta pa-8">
-              <h5 class="primary--text">{{ item.perfil }}</h5>
-              <p class="medium success--text mt-2">
-                El licenciado en gastronomía será capaz de preservar, difundir y
-                transmitir la cultura gastronómica en todos sus enfoques con sus
-                conocimientos e información integral obtenida tanto teóricas
-                como practicas en el procesamiento de alimentos y bebidas
-              </p>
-            </div>
-          </v-card>
-        </v-col>
-      </v-row>
-    </v-card>
+          </div>
+        </v-card>
+      </v-col>
+    </v-row>
   </div>
 </template>
 
@@ -52,7 +48,7 @@ export default {
     return {
       data: [
         {
-          src: require("@/assets/images/imagenLicEnAdmin.jpg"),
+          src: require("@/assets/images/imagenLicEnGastronomia.jpg"),
           encabezado: `Licenciatura en Administración de Empresas Turísticas`,
           rvoe: "20171490",
           duracion: "DURACIÓN DE 3 AÑOS 4 MESES (PLAN CUATRIMESTRAL)",

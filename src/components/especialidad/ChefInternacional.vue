@@ -2,9 +2,7 @@
   <div class="ma-10">
     <v-row v-for="item in data" :key="item.titulo">
       <v-col cols="12" sm="6" md="12" class="cajaImagen">
-        <v-card width="100%" elevation="0" height="600px">
-          <img :src="item.src" class="imagen" />
-        </v-card>
+        <img :src="item.src" class="imagen" />
       </v-col>
       <v-col class="pl-8 caja2">
         <v-card elevation="0" width="auto">
@@ -55,7 +53,7 @@ export default {
     return {
       data: [
         {
-          src: require("@/assets/images/imagenEspecialidadChef.jpg"),
+          src: require("@/assets/images/ImagenEspecialidadRepostero.jpg"),
           titulo: "Chef Internacional",
           duracion: "DURACIÓN DE 2 AÑOS",
           especialidad:

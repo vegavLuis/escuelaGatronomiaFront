@@ -3,9 +3,7 @@
     <v-row v-for="item in data" :key="item.titulo">
       <v-card elevation="0">
         <v-col cols="12" sm="6" md="12" class="cajaImagen">
-          <v-card width="100%" elevation="0" height="600px">
-            <img :src="item.src" class="imagen" />
-          </v-card>
+          <img :src="item.src" class="imagen" />
         </v-col>
         <v-col class="pl-8 caja2">
           <v-card elevation="0">
