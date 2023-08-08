@@ -1,5 +1,5 @@
 <template>
-  <div class="ma-10">
+  <div>
     <v-row v-for="item in data" :key="item.encabezado">
       <v-col cols="12" md="6">
         <img :src="item.src" class="imagen" />

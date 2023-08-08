@@ -1,7 +1,8 @@
 <template>
-  <div class="ma-10">
+  <div>
     <v-row v-for="item in data" :key="item.titulo">
-      <v-col cols="12" sm="6" md="12" class="cajaImagen">
+      <v-card color="transparent" class="pa-2" elevation="0">
+      <v-col cols="12" sm="6" md="12" class="cajaImagen ma-0 pa-0">
         <img :src="item.src" class="imagen" />
       </v-col>
       <v-col class="pl-8 caja2">
@@ -42,6 +43,7 @@
           y creatividad.
         </p>
       </div>
+    </v-card>
     </v-row>
   </div>
 </template>

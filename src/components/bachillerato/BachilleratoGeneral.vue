@@ -1,5 +1,5 @@
 <template>
-  <div class="ma-10">
+  <div>
     <v-row v-for="item in data" :key="item.titulo">
       <v-col cols="12" sm="12" md="6" order="last" order-md="6" order-lg="6">
         <v-card elevation="0">

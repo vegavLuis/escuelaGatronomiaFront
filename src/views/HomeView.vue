@@ -4,6 +4,7 @@
     <Licenciatura />
     <Especialidad />
     <Index />
+    <Calendario/>
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import Carousel from "../components/Carousel.vue";
 import Licenciatura from "../components/licenciaturas/Index.vue";
 import Especialidad from "../components/especialidad/Index.vue";
 import Index from "../components/bachillerato/Index.vue";
+import Calendario from "@/components/Calendario.vue"
 export default {
   name: "Home",
   components: {
@@ -19,6 +21,7 @@ export default {
     Licenciatura,
     Especialidad,
     Index,
+    Calendario
   },
 };
 </script>
