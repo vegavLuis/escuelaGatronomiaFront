@@ -5,6 +5,7 @@
     <Especialidad />
     <Index />
     <Calendario/>
+    <Testinmonios/>
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import Licenciatura from "../components/licenciaturas/Index.vue";
 import Especialidad from "../components/especialidad/Index.vue";
 import Index from "../components/bachillerato/Index.vue";
 import Calendario from "@/components/Calendario.vue"
+import Testinmonios from '@/components/Testimonios.vue'
 export default {
   name: "Home",
   components: {
@@ -21,7 +23,8 @@ export default {
     Licenciatura,
     Especialidad,
     Index,
-    Calendario
+    Calendario,
+    Testinmonios
   },
 };
 </script>
