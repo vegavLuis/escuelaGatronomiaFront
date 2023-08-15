@@ -1,5 +1,8 @@
 <template>
   <v-app>
+    <v-btn fab large fixed bottom right color="green" dark>
+      <v-icon>mdi-whatsapp</v-icon>
+    </v-btn>
     <Barra />
     <router-view />
   </v-app>
@@ -27,8 +30,8 @@ export default {
 * {
   font-family: "Manrope";
 }
-.tiro-devnagari{
-  font-family: 'Trio Devanagari Hindi';
+.tiro-devnagari {
+  font-family: "Trio Devanagari Hindi";
   font-style: italic;
 }
 .barra1.active {
