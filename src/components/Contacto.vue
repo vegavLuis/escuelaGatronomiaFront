@@ -79,7 +79,7 @@
             </v-col>
           </v-row>
           <a
-            href="https://wa.me/5511105630"
+            href="https://wa.me/5513169074"
             class="white--text lign-start"
             target="”_blank”"
             >Desarrollado por Luis Vega</a
