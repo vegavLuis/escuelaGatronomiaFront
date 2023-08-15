@@ -1,9 +1,7 @@
 <template>
   <div>
     <v-container>
-      <v-card elevation="0">
-        <h2 class="text-center pt-12 pb-6 tiro-devnagari">Testimonios</h2>
-      </v-card>
+      <h2 class="text-center pt-12 pb-6 tiro-devnagari">Testimonios</h2>
       <carousel-3d
         :disable3d="true"
         :controls-visible="true"
@@ -20,12 +18,8 @@
         >
           <p class="manrope">
             {{ item.comentario }}<br />
-            <v-rating
-              :value="5"
-              readonly
-              color="amber"
-              size="16"
-            ></v-rating><br />
+            <v-rating :value="5" readonly color="amber" size="16"></v-rating
+            ><br />
             <span class="primary--text">{{ item.name }}</span>
           </p>
         </slide>
