@@ -15,7 +15,7 @@
           alt="Logotipo"
           class="shrink ml-2 hidden-md-and-up"
           contain
-          src="@/assets/logo.png"
+          src="@/assets/logo.svg"
           transition="scale-transition"
           width="80"
         />
@@ -24,7 +24,7 @@
           class="shrink hidden-sm-and-down"
           contain
           min-width="100"
-          src="@/assets/logo.png"
+          src="@/assets/logo.svg"
           width="100"
         />
       </div>
