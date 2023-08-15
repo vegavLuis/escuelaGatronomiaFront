@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-row no-gutters class="pt-12">
-      <v-col cols="6">
+      <v-col cols="12" md="6">
         <v-card color="primary" class="pa-8 white--text">
           <h3 class="tiro-devnagari medium">Contáctanos</h3>
           <v-row class="pt-6">
@@ -60,7 +60,7 @@
           </v-row>
         </v-card>
       </v-col>
-      <v-col cols="6">
+      <v-col cols="12" md="6">
         <v-card
           color="secondary"
           class="pa-8 d-flex align-center justify-space-around flex-column"
@@ -80,7 +80,7 @@
           </v-row>
           <a
             href="https://wa.me/5513169074"
-            class="white--text lign-start"
+            class="white--text mt-12"
             target="”_blank”"
             >Desarrollado por Luis Vega</a
           >
