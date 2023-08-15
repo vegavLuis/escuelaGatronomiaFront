@@ -10,24 +10,26 @@
       app
     >
       <!-- IMAGES -->
-      <div class="">
-        <v-img
+      <v-card height="100%" color="transparent" elevation="0">
+        <!-- <v-img
           alt="Logotipo"
           class="shrink ml-2 hidden-md-and-up"
           contain
           src="@/assets/logo.svg"
           transition="scale-transition"
           width="80"
-        />
-        <v-img
+        /> -->
+        <v-img src="@/assets/logo.svg" class="imagen hidden-md-and-up"/>
+        <v-img src="@/assets/logo.svg" class="imagen hidden-sm-and-down pl-9"/>
+        <!-- <v-img
           alt="Logotipo"
           class="shrink hidden-sm-and-down"
           contain
           min-width="100"
           src="@/assets/logo.svg"
           width="100"
-        />
-      </div>
+        /> -->
+      </v-card>
       <v-spacer></v-spacer>
       <!-- MENU CON DESPLIEGUE -->
       <div class="mr-2">
@@ -163,3 +165,10 @@ export default {
   },
 };
 </script>
+<style scoped>
+.imagen {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+</style>
