@@ -2,8 +2,8 @@
   <div>
     <v-container>
     <h2 class="text-center pt-12 pb-6 tiro-devnagari">Licenciatura</h2>
-      <LicEnGastronomiaVue />
-      <LicEnAdmin/>
+      <LicEnGastronomiaVue id="licenciaturaEnGastronomia"/>
+      <LicEnAdmin id="licenciaturaEnAdministracion"/>
     </v-container>
   </div>
 </template>

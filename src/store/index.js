@@ -10,18 +10,18 @@ export default new Vuex.Store({
         titulo: "CALENDARIO DE CURSOS",
         color: "transparent",
         elevation: "0",
-        element:"#calendarioDeCursos"
+        element:"calendarioDeCursos"
       },
       {
         titulo: "TESTIMONIOS",
         color: "transparent",
         elevation: "0",
-        element:"#testimonios"
+        element:"testimonios"
       },
       {
         titulo: "CONTACTO",
         color: "info",
-        element:"#contacto"
+        element:"contacto"
       },
     ],
     listaConDespliegue: [
@@ -36,7 +36,7 @@ export default new Vuex.Store({
         title: "BACHILLERATOS",
         prueba: [
           {sub: "Bachillerato con Gastronomía", element: "bachilleratoGastronomia"}, 
-          {sub: "Bachillerato General", element: "#bachilleratoGeneral"}
+          {sub: "Bachillerato General", element: "bachilleratoGeneral"}
         ],
       },
     ],

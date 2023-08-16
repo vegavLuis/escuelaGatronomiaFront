@@ -4,9 +4,9 @@
     <Licenciatura />
     <Especialidad />
     <Index />
-    <Calendario/>
-    <Testinmonios/>
-    <Contacto/>
+    <Calendario id="calendarioDeCursos"/>
+    <Testinmonios id="testimonios"/>
+    <Contacto id="contacto"/>
   </div>
 </template>
 

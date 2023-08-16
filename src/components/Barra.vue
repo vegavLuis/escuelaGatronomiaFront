@@ -63,7 +63,7 @@
           :color="item.color"
           :elevation="item.elevation"
           class="hidden-sm-and-down"
-          @click="scrollInto(sub.element)"
+          @click="scrollInto(item.element)"
         >
           <span class="blue--whithe titulos">{{ item.titulo }}</span>
         </v-btn>
