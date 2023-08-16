@@ -9,7 +9,7 @@
         height="6"
       ></v-progress-linear>
     </v-overlay>
-    <v-btn fab large fixed bottom right color="green" dark>
+    <v-btn fab large fixed bottom right color="green" dark href="https://wa.me/5568753836" target="”_blank”">
       <v-icon>mdi-whatsapp</v-icon>
     </v-btn>
     <Barra />
@@ -32,17 +32,16 @@ export default {
     };
   },
   methods: {
-    on() {
+    oveon() {
       this.overlay = setTimeout(() => {
         this.overlay = false;
       }, 3600);
     },
   },
   mounted() {
-    this.on();
+    this.oveon();
   },
   created() {
-    
   },
 };
 </script>
