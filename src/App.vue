@@ -1,5 +1,14 @@
 <template>
   <v-app>
+    <v-overlay :value="overlay" z-index="1000" opacity="1">
+      <v-img src="@/assets/logo.svg" />
+      <v-progress-linear
+        color="primary"
+        indeterminate
+        rounded
+        height="6"
+      ></v-progress-linear>
+    </v-overlay>
     <v-btn fab large fixed bottom right color="green" dark>
       <v-icon>mdi-whatsapp</v-icon>
     </v-btn>
@@ -19,11 +28,22 @@ export default {
     return {
       drawer: false,
       group: null,
+      overlay: true,
     };
   },
-  methods: {},
-  mounted() {},
-  created() {},
+  methods: {
+    on() {
+      this.overlay = setTimeout(() => {
+        this.overlay = false;
+      }, 3600);
+    },
+  },
+  mounted() {
+    this.on();
+  },
+  created() {
+    
+  },
 };
 </script>
 <style>
