@@ -2,7 +2,7 @@
   <div>
     <v-row v-for="item in data" :key="item.titulo">
       <v-col cols="12" sm="12" md="6" order="last" order-md="6" order-lg="6" >
-        <v-card elevation="0" data-aos="fade-right">
+        <v-card elevation="0" data-aos="zoom-out" data-aos-duration="1000">
           <h3 class="primary--text">{{ item.titulo }}</h3>
           <p class="success--text semiBold">RVOE: {{ item.rvoe }}</p>
           <p class="extraBold info--text">{{ item.duracion }}</p>
@@ -46,7 +46,7 @@
         </v-card>
       </v-col>
       <v-col cols="12" sm="12" md="6" order-md="12" order-lg="12" >
-        <img :src="item.src" class="imagen" data-aos="fade-right"/>
+        <img :src="item.src" class="imagen" data-aos="zoom-out" data-aos-duration="1000"/>
       </v-col>
     </v-row>
   </div>

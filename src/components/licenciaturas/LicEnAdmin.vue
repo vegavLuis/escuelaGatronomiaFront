@@ -2,10 +2,10 @@
   <div>
     <v-row v-for="item in data" :key="item.encabezado">
       <v-col cols="12" md="6">
-        <img :src="item.src" class="imagen" data-aos="fade-right"/>
+        <img :src="item.src" class="imagen" data-aos="zoom-in" data-aos-duration="1000"/>
       </v-col>
       <v-col cols="12" md="6">
-        <v-card elevation="0" data-aos="fade-right">
+        <v-card elevation="0" data-aos="zoom-in" data-aos-duration="1000">
           <h3 class="primary--text extraBold">
             {{ item.encabezado }}
           </h3>
