@@ -2,11 +2,11 @@
   <div>
     <v-row v-for="item in data" :key="item.titulo">
       <v-card color="transparent" class="pa-2" elevation="0">
-      <v-col cols="12" sm="6" md="12" class="cajaImagen ma-0 pa-0" data-aos="zoom-in">
-        <img :src="item.src" class="imagen" />
+      <v-col cols="12" sm="6" md="12" class="cajaImagen ma-0 pa-0">
+        <img :src="item.src" class="imagen" data-aos="fade-right"/>
       </v-col>
-      <v-col class="pl-8 caja2" data-aos="zoom-in">
-        <v-card elevation="0" width="auto">
+      <v-col class="pl-8 caja2">
+        <v-card elevation="0" width="auto" data-aos="fade-right">
           <h3>
             {{ item.titulo }}
           </h3>
@@ -30,7 +30,7 @@
           </v-btn>
         </v-card>
       </v-col>
-      <div class="caja pa-8 mt-8" data-aos="zoom-in">
+      <div class="caja pa-8 mt-8" data-aos="fade-right">
         <h5 class="primary--text">{{ item.perfil }}</h5>
         <p class="medium success--text mt-2">
           Al egresar de la
