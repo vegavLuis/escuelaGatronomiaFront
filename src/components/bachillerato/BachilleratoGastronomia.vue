@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-row v-for="item in data" :key="item.titulo">
-      <v-col cols="12" sm="12" md="6" order="last" order-md="6" order-lg="6">
+      <v-col cols="12" sm="12" md="6" order="last" order-md="6" order-lg="6" data-aos="fade-right">
         <v-card elevation="0">
           <h3 class="primary--text">{{ item.titulo }}</h3>
           <p class="success--text semiBold">RVOE: {{ item.rvoe }}</p>
@@ -45,7 +45,7 @@
           </div>
         </v-card>
       </v-col>
-      <v-col cols="12" sm="12" md="6" order-md="12" order-lg="12">
+      <v-col cols="12" sm="12" md="6" order-md="12" order-lg="12" data-aos="fade-left">
         <img :src="item.src" class="imagen" />
       </v-col>
     </v-row>

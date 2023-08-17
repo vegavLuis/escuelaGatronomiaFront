@@ -9,7 +9,25 @@
         height="6"
       ></v-progress-linear>
     </v-overlay>
-    <v-btn fab large fixed bottom right color="green" dark href="https://wa.me/5568753836" target="”_blank”">
+    <v-btn
+      fab
+      fixed
+      bottom
+      right
+      large
+      color="green"
+      dark
+      href="https://wa.me/5568753836"
+      target="”_blank”"
+      class="whats"
+    >
+      <!-- <v-badge
+        color="primary"
+        content="¿Como podemos ayudarte?"
+        left
+        class="tol"
+      >
+      </v-badge> -->
       <v-icon>mdi-whatsapp</v-icon>
     </v-btn>
     <Barra />
@@ -41,14 +59,42 @@ export default {
   mounted() {
     this.oveon();
   },
-  created() {
-  },
+  created() {},
 };
 </script>
 <style>
 * {
   font-family: "Manrope";
 }
+.whats {
+  animation-name: whats;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+/* .tol {
+  animation-name: tol;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+} */
+@keyframes whats {
+  0% {
+    transform: scale(1, 1) rotate(0deg);
+  }
+  50% {
+    transform: scale(0.98, 0.98) rotate(2deg);
+  }
+}
+/* @keyframes tol {
+  0% {
+    transform: scale(0, 0);
+    animation-play-state: paused;
+  }
+  100% {
+    transform: scale(1, 1);
+    animation-play-state: paused;
+  }
+} */
 .tiro-devnagari {
   font-family: "Trio Devanagari Hindi";
   font-style: italic;
