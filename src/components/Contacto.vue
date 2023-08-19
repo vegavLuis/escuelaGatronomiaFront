@@ -169,7 +169,7 @@ export default {
     alerta() {
       this.$fire({
         title: "Mensaje enviado con exito",
-        // text: "text",
+        text: "En breve nos pondremos en contacto contigo",
         type: "success",
         timer: 3000,
       }).then((r) => {
