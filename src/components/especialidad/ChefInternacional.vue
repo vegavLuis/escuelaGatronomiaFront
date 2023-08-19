@@ -55,7 +55,7 @@ export default {
     return {
       data: [
         {
-          src: require("@/assets/images/ImagenEspecialidadRepostero.jpg"),
+          src: require("@/assets/images/chefInternacional.jpeg"),
           titulo: "Chef Internacional",
           duracion: "DURACIÓN DE 2 AÑOS",
           especialidad:

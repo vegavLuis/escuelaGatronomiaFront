@@ -54,7 +54,7 @@ export default {
     return {
       data: [
         {
-          src: require("@/assets/images/ImagenEspecialidadRepostero.jpg"),
+          src: require("@/assets/images/chefRepostero.jpeg"),
           titulo: "Chef Repostero",
           duracion: "DURACIÓN DE 2 AÑOS",
           especialidad:
