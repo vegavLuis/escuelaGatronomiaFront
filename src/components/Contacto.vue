@@ -7,7 +7,6 @@
           <v-form
             @submit.prevent="enviar()"
             ref="form"
-            v-model="valid"
             lazy-validation
           >
             <v-row class="pt-6">

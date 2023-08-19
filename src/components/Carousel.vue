@@ -1,12 +1,15 @@
 <template>
   <div>
-    <v-carousel
-      height="100vh"
-      width="100vw"
-      hide-delimiter-background
-      :show-arrows="false"
-    >
-      <v-carousel-item
+    <v-carousel hide-delimiter-background :show-arrows="false" height="100vh"
+        width="100vw">
+      <video
+        src="../assets/images/video.mp4"
+        autoplay
+        controls
+        height="100%"
+        width="100%"
+      ></video>
+      <!-- <v-carousel-item
         v-for="(item, i) in items"
         :key="i"
         :src="item.src"
@@ -24,7 +27,7 @@
             <h1 class="titulo white--text">Escuela de Alta Cocina y Gastromonía</h1>
           </v-card>
         </v-card>
-      </v-carousel-item>
+      </v-carousel-item> -->
     </v-carousel>
   </div>
 </template>
@@ -37,7 +40,7 @@ export default {
     return {
       items: [
         {
-          src: require("../assets/images/imagenCarousel1.jpg"),
+          src: require("../assets/images/video.mp4"),
         },
         {
           src: "https://cdn.vuetifyjs.com/images/carousel/sky.jpg",
@@ -58,12 +61,12 @@ export default {
 };
 </script>
 <style scoped>
-.card-titulo{
+.card-titulo {
   margin-top: 230px;
 }
 .titulo {
   justify-content: center;
-  font-family: 'Tiro Devanagari Hindi';
+  font-family: "Tiro Devanagari Hindi";
   font-style: italic;
   font-weight: normal;
 }
