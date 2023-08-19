@@ -9,11 +9,13 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import axios from "axios";
 import VueAxios from "vue-axios";
+import VueSimpleAlert from "vue-simple-alert";
 
 axios.defaults.baseURL = "http://localhost:3000/api";
 
 Vue.config.productionTip = false;
 Vue.use(VueAxios, axios)
+Vue.use(VueSimpleAlert)
 Vue.use(Carousel3d);
 new Vue({
   router,

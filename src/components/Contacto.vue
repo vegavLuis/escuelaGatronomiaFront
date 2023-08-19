@@ -21,7 +21,6 @@
                   :rules="nameRules"
                   required
                   class="pb-0 mb-0"
-                  autofocus
                   v-model.trim="datosGuardar.nombreApellido"
                 ></v-text-field>
               </v-col>
@@ -167,6 +166,16 @@ export default {
     },
   },
   methods: {
+    alerta() {
+      this.$fire({
+        title: "Mensaje enviado con exito",
+        // text: "text",
+        type: "success",
+        timer: 3000,
+      }).then((r) => {
+        console.log(r.value);
+      });
+    },
     resetValidation() {
       this.$refs.form.resetValidation();
     },
@@ -178,7 +187,8 @@ export default {
       this.datosGuardar.asunto = "";
       this.datosGuardar.mensaje = "";
       this.datosGuardar.numero = "";
-      this.resetValidation()
+      this.resetValidation();
+      this.alerta();
       // .then((res) => {
       //   console.log(res);
       // })
