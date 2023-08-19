@@ -4,60 +4,67 @@
       <v-col cols="12" md="6">
         <v-card color="primary" class="pa-8 white--text">
           <h3 class="tiro-devnagari medium">Contáctanos</h3>
-          <v-row class="pt-6">
-            <v-col cols="12" class="pb-0 mb-0">
-              <p class="tiro-devnagari-none medium pb-0 mb-0">
-                Nombre y Apellido
-              </p>
-              <v-text-field
-                background-color="#E0E0E0"
-                filled
-                required
-                class="pb-0 mb-0"
-              ></v-text-field>
-            </v-col>
-            <v-col cols="12" class="pb-0 mb-0">
-              <p class="tiro-devnagari-none medium pb-0 mb-0">
-                Correo Electrónico
-              </p>
-              <v-text-field
-                background-color="#E0E0E0"
-                filled
-                required
-                class="pb-0 mb-0"
-              ></v-text-field>
-            </v-col>
-            <v-col cols="12" class="pb-0 mb-0">
-              <p class="tiro-devnagari-none medium pb-0 mb-0">Asunto</p>
-              <v-text-field
-                background-color="#E0E0E0"
-                filled
-                required
-                class="pb-0 mb-0"
-              ></v-text-field>
-            </v-col>
-            <v-col cols="12" class="pb-0 mb-0">
-              <p class="tiro-devnagari-none medium pb-0 mb-0">
-                Número Telefónico
-              </p>
-              <v-text-field
-                background-color="#E0E0E0"
-                filled
-                required
-                class="pb-0 mb-0"
-              ></v-text-field>
-            </v-col>
-            <v-col cols="12" class="pb-0 mb-0">
-              <p class="tiro-devnagari-none medium pb-0 mb-0">Tu Mensaje</p>
-              <v-textarea
-                background-color="#E0E0E0"
-                filled
-                required
-                class="pb-0 mb-0"
-              ></v-textarea>
-            </v-col>
-            <v-btn color="info"> ENVIAR MENSAJE </v-btn>
-          </v-row>
+          <v-form @submit.prevent="enviar()">
+            <v-row class="pt-6">
+              <v-col cols="12" class="pb-0 mb-0">
+                <p class="tiro-devnagari-none medium pb-0 mb-0">
+                  Nombre y Apellido
+                </p>
+                <v-text-field
+                  background-color="#E0E0E0"
+                  filled
+                  required
+                  class="pb-0 mb-0"
+                  v-model="datosGuardar.nombreApellido"
+                ></v-text-field>
+              </v-col>
+              <v-col cols="12" class="pb-0 mb-0">
+                <p class="tiro-devnagari-none medium pb-0 mb-0">
+                  Correo Electrónico
+                </p>
+                <v-text-field
+                  background-color="#E0E0E0"
+                  filled
+                  required
+                  class="pb-0 mb-0"
+                  v-model="datosGuardar.mail"
+                ></v-text-field>
+              </v-col>
+              <v-col cols="12" class="pb-0 mb-0">
+                <p class="tiro-devnagari-none medium pb-0 mb-0">Asunto</p>
+                <v-text-field
+                  background-color="#E0E0E0"
+                  filled
+                  required
+                  class="pb-0 mb-0"
+                  v-model="datosGuardar.asunto"
+                ></v-text-field>
+              </v-col>
+              <v-col cols="12" class="pb-0 mb-0">
+                <p class="tiro-devnagari-none medium pb-0 mb-0">
+                  Número Telefónico
+                </p>
+                <v-text-field
+                  background-color="#E0E0E0"
+                  filled
+                  required
+                  class="pb-0 mb-0"
+                  v-model="datosGuardar.numero"
+                ></v-text-field>
+              </v-col>
+              <v-col cols="12" class="pb-0 mb-0">
+                <p class="tiro-devnagari-none medium pb-0 mb-0">Tu Mensaje</p>
+                <v-textarea
+                  background-color="#E0E0E0"
+                  filled
+                  required
+                  class="pb-0 mb-0"
+                  v-model="datosGuardar.mensaje"
+                ></v-textarea>
+              </v-col>
+              <v-btn color="info" type="submit"> ENVIAR MENSAJE </v-btn>
+            </v-row>
+          </v-form>
         </v-card>
       </v-col>
       <v-col cols="12" md="6">
@@ -90,6 +97,7 @@
   </div>
 </template>
 <script>
+// import axios from 'axios'
 export default {
   name: "EscuelaContacto",
   data() {
@@ -113,10 +121,33 @@ export default {
             "Calle 9, Mz. 79, Lt 5, Col. Valle de Los Reyes, 56430, Los Reyes La Paz, Edo. de México.",
         },
       ],
+      datosGuardar: {
+        nombreApellido: "",
+        mail: "",
+        asunto: "",
+        numero: "",
+        mensaje: "",
+      },
     };
   },
   mounted() {},
-  methods: {},
+  methods: {
+    enviar() {
+      console.log(this.datosGuardar);
+      this.axios.post('/enviar', this.datosGuardar)
+      .then(res =>{
+        console.log(res);
+        this.datosGuardar.nombreApellido = ''
+        this.datosGuardar.mail = ''
+        this.datosGuardar.asunto = ''
+        this.datosGuardar.numero = ''
+        this.datosGuardar.mensaje = ''
+      })
+      .catch(e =>{
+        console.log(e, 'este es error')
+      })
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
