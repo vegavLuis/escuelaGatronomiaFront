@@ -19,8 +19,8 @@
           transition="scale-transition"
           width="80"
         /> -->
-        <v-img src="@/assets/logo.svg" class="imagen hidden-md-and-up"/>
-        <v-img src="@/assets/logo.svg" class="imagen hidden-sm-and-down pl-9"/>
+        <v-img src="@/assets/logo.svg" class="imagen hidden-md-and-up" />
+        <v-img src="@/assets/logo.svg" class="imagen hidden-sm-and-down pl-9" />
         <!-- <v-img
           alt="Logotipo"
           class="shrink hidden-sm-and-down"
@@ -69,7 +69,7 @@
         </v-btn>
       </div>
       <!-- BOTON MENU BURGER -->
-      <v-btn class="mr-2 hidden-md-and-up" icon @click="abrir">
+      <v-btn class="mr-2 hidden-md-and-up btonBlack" icon @click="abrir" light>
         <v-icon> mdi-menu </v-icon>
       </v-btn>
     </v-app-bar>
@@ -86,15 +86,18 @@
         no-action -->
           <template v-slot:activator>
             <v-list-item-content>
-              <span class="titulos">{{ item.title }}</span>
+              <span class="titulos" @click="scrollInto(item.element)">{{
+                item.title
+              }}</span>
             </v-list-item-content>
           </template>
 
           <v-list-item v-for="child in item.prueba" :key="child.title">
             <v-list-item-content>
               <v-list-item-title @click="cerrar">
-                <span class="titulo">{{ child.sub }}</span>
-                <a href="https://google.com"> </a>
+                <a @click="scrollInto(child.element)">
+                  <span class="titulo">{{ child.sub }}</span>
+                </a>
               </v-list-item-title>
             </v-list-item-content>
           </v-list-item>
@@ -113,10 +116,15 @@
             <!-- <v-list-item-icon>
             <v-icon>mdi-home</v-icon>
           </v-list-item-icon> -->
-            <span class="titulos">
-              {{ item.titulo }}
-              <a href="https://google.com"> </a>
-            </span>
+            <a
+              @click="scrollInto(item.element)"
+              style="text-decoration: none"
+              class="black--text"
+            >
+              <span class="titulos tit-clic">
+                {{ item.titulo }}
+              </span>
+            </a>
           </v-list-item>
         </v-btn>
       </v-list>
@@ -138,8 +146,11 @@ export default {
   },
   mounted() {
     const nav = document.querySelector(".barra1");
+    const bton = document.querySelector(".btonBlack");
     window.addEventListener("scroll", function () {
       nav.classList.toggle("active", window.scrollY > 0);
+      // nav.classList.toggle("btonW", window.scrollY > 0);
+      bton.classList.toggle("whi", window.scrollY > 0);
     });
   },
   methods: {
@@ -166,6 +177,10 @@ export default {
 };
 </script>
 <style scoped>
+.tit-clic:active {
+  color: #a71017;
+}
+
 .imagen {
   width: 100%;
   height: 100%;

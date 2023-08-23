@@ -102,6 +102,9 @@ export default {
 .barra1.active {
   background-color: rgba(0, 0, 0, 0.95) !important;
 }
+.btonBlack.whi {
+  color: white !important;
+}
 .semiBold {
   font-weight: 600;
 }
